@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContatoComponent } from './contato/contato.component';
 import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
+import { ShearchPostComponent } from './shearch-post/shearch-post.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
   {path: 'home', component: HomeComponent},
   {path: 'feed', component: FeedComponent},
-  {path: 'contato', component: ContatoComponent}
+  {path: 'contato', component: ContatoComponent},
+  {path: 'shearch/:mensagem', component:ShearchPostComponent}
 ];
 
 @NgModule({

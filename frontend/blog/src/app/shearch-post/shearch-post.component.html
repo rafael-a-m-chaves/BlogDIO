@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            
+            <app-card-user></app-card-user>
+            
+        </div>
+        <div class="col-md-8">
+            
+            <h3 class="text-center mb-5 text-monospace" >Comentários encontrados pela pesquisa</h3>
+                <div class="container">
+                <div class="card mb-4" *ngFor="let listPosts of listPost | async">
+                    <div class="card-header">
+                        <h5 class="card-title">{{listPosts.id}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{listPosts.nome}}</p>
+                        <p class="card-text">{{listPosts.mensagem}}</p>
+                    </div>
+                                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

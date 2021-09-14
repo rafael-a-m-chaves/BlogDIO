@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../service/post.service';
-import { Post } from '../model/Post';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-feed',
@@ -10,22 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class FeedComponent implements OnInit {
 
-  listPost!: Observable<Post[]>;
-  post!:Post;
-
-  constructor(private postService: PostService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.findPosts();
+    
   }
 
-  findPosts(){
-    this.listPost = this.postService.getPosts();
-  }
-
-  cadastrarMensagem(){
-    this.postService.postMensagem(this.post).subscribe()
-    this.post = new Post();
-    this.findPosts();
-  }
 }

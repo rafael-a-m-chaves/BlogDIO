@@ -1,0 +1,13 @@
+<h3 class="text-center mb-5 text-monospace" >Comentários adicionados</h3>
+    <div class="container">
+    <div class="card mb-4" *ngFor="let listPosts of listPost | async">
+        <div class="card-header">
+            <h5 class="card-title">{{listPosts.id}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{listPosts.nome}}</p>
+            <p class="card-text">{{listPosts.mensagem}}</p>
+        </div>
+                    
+    </div>
+</div>

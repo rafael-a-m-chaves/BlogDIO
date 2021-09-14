@@ -1,0 +1,21 @@
+
+    <div class="card border-0" style="width: 18rem;">
+        <div class="d-flex justify-content-center">
+            <img src="../../assets/WhatsApp Image 2021-04-11 at 10.25.35.jpeg" class="card-img-top rounded-circle" alt="Imagem de Perfil Do Usuario Rafael" style="height: 150px; width: 150px;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title text-center">Rafael Chaves</h5>
+            <p class="card-text">Desenvolvedor full stack Jr.</p>
+            <a href="https://github.com/rafael-a-m-chaves" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">GitHub</a>
+            
+            <hr class="mt-4 mb-4">
+            <H6 class="mb-3 text-monospace text-center">Pesquisar por título</H6>
+            
+                <form (ngSubmit)=pesquisar()>
+                    <input type="text" class="form-control mb-3 w-100" id="pesquisa" required [(ngModel)]="texto.mensagem" name="pesquisa">
+                    <button type="submit" class="btn btn-outline-warning w-100">Pesquisar</button>
+                </form>
+            
+            
+        </div>
+    </div>

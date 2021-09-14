@@ -11,6 +11,10 @@ import { ContatoComponent } from './contato/contato.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { FeedpostsComponent } from './feedposts/feedposts.component';
+import { NewPostComponent } from './new-post/new-post.component';
+import { CardUserComponent } from './card-user/card-user.component';
+import { ShearchPostComponent } from './shearch-post/shearch-post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     FeedComponent,
-    ContatoComponent
+    ContatoComponent,
+    FeedpostsComponent,
+    NewPostComponent,
+    CardUserComponent,
+    ShearchPostComponent
   ],
   imports: [
     BrowserModule,

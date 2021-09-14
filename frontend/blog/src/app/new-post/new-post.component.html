@@ -1,0 +1,22 @@
+<div [hidden]="submitted">
+    <form (ngSubmit)="cadastrarMensagem()">
+            <div class="container">
+            <h3 class="text-center mb-4 text-monospace" >Digite abaixo os seus comentários:</h3>
+            <div class="form-grup">
+
+                <label for="nome" class="text-monospace">Nome:</label>
+                <input type="text" class="form-control" placeholder="Digite o Seu Nome" id="nome" required [(ngModel)]="post.nome" name="nome">
+                
+            </div>
+
+            <div class="form-grup">
+                <label for="mensagem" class="text-monospace">Mensagem:</label>
+                <textarea class="form-control" id="mensagem" cols="30" rows="10" placeholder="Digite a sua mensagem" required [(ngModel)]="post.mensagem" name="mensagem"></textarea>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn  btn-outline-info w-25" >Publicar</button>
+            </div>
+        </div>
+    </form>
+</div>

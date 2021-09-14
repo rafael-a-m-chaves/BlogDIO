@@ -8,15 +8,21 @@ import { Post } from '../model/Post';
 })
 export class PostService {
 
+  private baseUrl = 'http://localhost:3000/posts';
+
   constructor(private http: HttpClient) { 
 
   }
 
   getPosts():Observable<any>{
-    return this.http.get('http://localhost:3000/posts')
+    return this.http.get(`${this.baseUrl}`)
   }
 
   postMensagem(post: Post): Observable<object>{
-    return this.http.post('http://localhost:3000/posts', post) 
+    return this.http.post(`${this.baseUrl}`, post) 
+  }
+
+  pesquisarPost(mensagem: any): Observable<Object>{
+    return this.http.get(`${this.baseUrl}/${mensagem}`)
   }
 }
