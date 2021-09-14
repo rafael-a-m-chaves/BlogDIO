@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0" style="width: 18rem;">
+                <div class="d-flex justify-content-center">
+                    <img src="../../assets/WhatsApp Image 2021-04-11 at 10.25.35.jpeg" class="card-img-top rounded-circle" alt="Imagem de Perfil Do Usuario Rafael" style="height: 150px; width: 150px;">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Rafael Chaves</h5>
+                    <p class="card-text">Desenvolvedor full stack Jr.</p>
+                    <a href="https://github.com/rafael-a-m-chaves" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">GitHub</a>
+                    
+                    <hr class="mt-4 mb-4">
+                    <H6 class="mb-3 text-monospace text-center">Pesquisar por título</H6>
+                    <input type="text" class="form-control mb-3 w-100">
+                    <button class="btn btn-outline-warning w-100">Pesquisar</button>
+                </div>
+              </div>
+        </div>
+        
+        <div class="col-md-8">
+            <form (ngSubmit)="cadastrarMensagem()">
+                <div>
+                    <h3 class="text-center mb-4 text-monospace" >Digite abaixo os seus comentários:</h3>
+                    <div class="form-grup">
+
+                        <label for="nome" class="text-monospace">Nome:</label>
+                        <input type="text" class="form-control" placeholder="Digite o Seu Nome" id="nome" name="nome" required [(ngModel)]="post.nome">
+                        
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="mensagem" class="text-monospace">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" cols="30" rows="10" placeholder="Digite a sua mensagem" required [(ngModel)]="post.mensagem" ></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn  btn-outline-info w-25" >Publicar</button>
+                    </div>
+                </div>
+            </form>
+            <hr class="mt-5 mb-5">
+
+            <h3 class="text-center mb-5 text-monospace" >Comentários adicionados</h3>
+            <div class="container">
+                <div class="card mb-4" *ngFor="let listPosts of listPost | async">
+                    <div class="card-header">
+                        <h5 class="card-title">{{listPosts.id}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{listPosts.nome}}</p>
+                        <p class="card-text">{{listPosts.mensagem}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
